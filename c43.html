@@ -4,76 +4,116 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2016 Mercedes-Benz C43 AMG</title>
-
 <style>
-body{
-    background:#111;
-    color:white;
-    font-family:Arial;
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-}
-
-img{
-    width:100%;
-    border-radius:15px;
-    margin-bottom:15px;
-}
-
-.price{
-    color:#ffd700;
-    font-size:32px;
-    font-weight:bold;
-}
-
-.back{
-    display:inline-block;
-    margin-bottom:20px;
-    color:#fff;
-}
+body{margin:0;background:#111;color:white;font-family:"Microsoft JhengHei",Arial,sans-serif}
+.wrap{max-width:1000px;margin:auto;padding:20px}
+.back{display:inline-block;color:white;text-decoration:none;margin-bottom:18px;font-size:20px}
+h1{font-size:36px;margin:10px 0}
+.price{color:#FFD700;font-size:42px;font-weight:bold;margin:12px 0}
+.desc{font-size:22px;color:#ddd;line-height:1.8}
+.photo-box{background:#000;border-radius:18px;overflow:hidden;position:relative;margin:20px 0}
+.photo-box img{width:100%;max-height:620px;object-fit:contain;display:block;background:#000}
+.controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:12px 0}
+.controls button{flex:1;background:#FFD700;color:#000;border:0;border-radius:12px;padding:14px;font-size:20px;font-weight:bold}
+.counter{text-align:center;color:#FFD700;font-size:20px;margin:10px 0}
+.section{background:#1b1b1b;border-radius:16px;padding:22px;margin-top:22px;border:1px solid #333}
+.section h2{font-size:30px;margin:0 0 15px;border-left:5px solid #FFD700;padding-left:12px}
+.section ul{font-size:22px;line-height:2;margin:0;padding-left:28px}
+.float-contact{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:9999}
+.float-contact a{color:white;padding:12px 18px;border-radius:50px;text-decoration:none;font-weight:bold;text-align:center}
 </style>
-
 </head>
-
 <body>
 
+<div class="wrap">
 <a class="back" href="index.html">← 返回車庫首頁</a>
 
 <h1>2016 Mercedes-Benz C43 AMG</h1>
+<div class="price">售價：100萬</div>
+<div class="desc">SAVE認證車｜23P跟車系統｜柏林之音｜全景天窗｜紅色真皮內裝</div>
 
-<div class="price">
-售價：100萬
+<div class="photo-box">
+<img id="carPhoto" src="">
 </div>
 
-<br>
+<div class="counter" id="counter"></div>
 
-<img src="images/c43-amg-2016/01.jpeg">
-<img src="images/c43-amg-2016/02.jpeg">
-<img src="images/c43-amg-2016/03.jpeg">
+<div class="controls">
+<button onclick="prevPhoto()">← 上一張</button>
+<button onclick="nextPhoto()">下一張 →</button>
+</div>
 
+<div class="section">
 <h2>重點配備</h2>
-
 <ul>
+<li>SAVE認證車</li>
+<li>367hp V6雙渦輪</li>
 <li>23P跟車系統</li>
-<li>抬頭顯示器</li>
 <li>柏林之音</li>
-<li>電子懸吊</li>
+<li>抬頭顯示器</li>
 <li>全景天窗</li>
 <li>夜色套件</li>
 <li>紅色真皮內裝</li>
 </ul>
+</div>
 
-<h2>改裝升級</h2>
-
+<div class="section">
+<h2>車況說明</h2>
 <ul>
-<li>Mach5頭段</li>
-<li>53後四出</li>
-<li>碳纖維空力套件</li>
-<li>加大碟盤</li>
-<li>卡鉗升級</li>
-<li>直瀑式水箱護罩</li>
+<li>車況漂亮</li>
+<li>配備滿</li>
+<li>歡迎現場賞車試車</li>
 </ul>
+</div>
+</div>
+
+<div class="float-contact">
+<a href="tel:0928661002" style="background:#25D366;">📞 電話</a>
+<a href="https://line.me/ti/p/0841298889" target="_blank" style="background:#06C755;">LINE</a>
+<a href="https://www.instagram.com/soooong.08" target="_blank" style="background:#E1306C;">IG</a>
+</div>
+
+<script>
+const photos=[
+"images/c43-amg-2016/01.jpeg",
+"images/c43-amg-2016/02.jpeg",
+"images/c43-amg-2016/03.jpeg",
+"images/c43-amg-2016/04.png",
+"images/c43-amg-2016/05.png",
+"images/c43-amg-2016/06.png",
+"images/c43-amg-2016/07.png",
+"images/c43-amg-2016/08.png",
+"images/c43-amg-2016/09.png",
+"images/c43-amg-2016/10.jpeg",
+"images/c43-amg-2016/11.jpeg",
+"images/c43-amg-2016/12.jpeg",
+"images/c43-amg-2016/13.jpeg",
+"images/c43-amg-2016/14.jpeg",
+"images/c43-amg-2016/15.jpeg",
+"images/c43-amg-2016/16.jpeg"
+];
+
+let index=0;
+const img=document.getElementById("carPhoto");
+const counter=document.getElementById("counter");
+
+function showPhoto(){
+img.src=photos[index];
+counter.innerText=(index+1)+" / "+photos.length;
+}
+
+function nextPhoto(){
+index=(index+1)%photos.length;
+showPhoto();
+}
+
+function prevPhoto(){
+index=(index-1+photos.length)%photos.length;
+showPhoto();
+}
+
+showPhoto();
+</script>
 
 </body>
 </html>
