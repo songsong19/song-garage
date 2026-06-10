@@ -4,99 +4,80 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2014 Focus ST 6MT</title>
-
 <style>
 body{margin:0;background:#111;color:white;font-family:"Microsoft JhengHei",Arial,sans-serif}
-.wrap{max-width:1000px;margin:auto;padding:20px}
-.back{display:inline-block;color:white;text-decoration:none;margin-bottom:18px;font-size:20px}
-h1{font-size:36px;margin:10px 0}
-.price{color:#FFD700;font-size:42px;font-weight:bold;margin:12px 0}
-.desc{font-size:22px;color:#ddd;line-height:1.8}
-.photo-box{background:#000;border-radius:18px;overflow:hidden;margin:20px 0}
-.photo-box img{width:100%;max-height:620px;object-fit:contain;display:block;background:#000}
-.controls{display:flex;gap:12px;margin:12px 0}
-.controls button{flex:1;background:#FFD700;color:#000;border:0;border-radius:12px;padding:14px;font-size:20px;font-weight:bold}
-.counter{text-align:center;color:#FFD700;font-size:20px;margin:10px 0}
-.section{background:#1b1b1b;border-radius:16px;padding:22px;margin-top:22px;border:1px solid #333}
-.section h2{font-size:30px;margin:0 0 15px;border-left:5px solid #FFD700;padding-left:12px}
-.section ul{font-size:22px;line-height:2;margin:0;padding-left:28px}
-.float-contact{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:9999}
-.float-contact a{color:white;padding:12px 18px;border-radius:50px;text-decoration:none;font-weight:bold;text-align:center}
+.wrap{max-width:960px;margin:auto;padding:18px}
+.back{display:block;color:white;text-decoration:none;font-size:20px;margin-bottom:18px}
+h1{font-size:34px;margin:8px 0 10px}
+.price{font-size:42px;color:#FFD700;font-weight:bold;margin-bottom:12px}
+.desc{font-size:22px;color:#ddd;line-height:1.8;margin-bottom:18px}
+.photo{background:#000;border-radius:18px;overflow:hidden}
+.photo img{width:100%;height:520px;object-fit:contain;background:#000;display:block}
+.count{text-align:center;color:#FFD700;font-size:22px;margin:12px 0}
+.controls{display:flex;gap:12px;margin-bottom:20px}
+.controls button{flex:1;padding:15px;background:#FFD700;color:#000;border:0;border-radius:12px;font-size:20px;font-weight:bold}
+.box{background:#1b1b1b;border:1px solid #333;border-radius:16px;padding:22px;margin:18px 0}
+.box h2{font-size:30px;margin:0 0 15px;border-left:5px solid #FFD700;padding-left:12px}
+.box li{font-size:22px;line-height:2}
+.float{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:10px}
+.float a{color:white;text-decoration:none;padding:12px 18px;border-radius:40px;font-weight:bold;text-align:center}
+@media(max-width:600px){.photo img{height:330px}h1{font-size:30px}.price{font-size:38px}}
 </style>
 </head>
-
 <body>
 
 <div class="wrap">
-
 <a class="back" href="index.html">← 返回車庫首頁</a>
 
 <h1>2014 Focus ST 6MT</h1>
+<div class="price">售價：39.8萬</div>
+<div class="desc">里程9萬多公里｜6速手排｜RECARO賽車座椅｜已整備完成</div>
 
-<div class="price">
-售價：39.8萬
+<div class="photo">
+<img id="carPhoto">
 </div>
 
-<div class="desc">
-里程9萬公里｜6速手排｜RECARO賽車座椅
-</div>
-
-<div class="photo-box">
-<img id="carPhoto" src="">
-</div>
-
-<div class="counter" id="counter"></div>
+<div class="count" id="counter"></div>
 
 <div class="controls">
 <button onclick="prevPhoto()">← 上一張</button>
 <button onclick="nextPhoto()">下一張 →</button>
 </div>
 
-<div class="section">
+<div class="box">
 <h2>重點配備</h2>
-
 <ul>
-<li>2.0 EcoBoost 渦輪引擎</li>
 <li>6速手排變速箱</li>
-<li>ST 原廠 RECARO 座椅</li>
+<li>ST 正 RECARO 賽車座椅</li>
 <li>多功能方向盤</li>
 <li>定速巡航</li>
-<li>SONY 音響</li>
-<li>恆溫空調</li>
-<li>Keyless 免鑰匙啟動</li>
 <li>ST 三環儀表</li>
+<li>同級稀有手排性能鋼砲</li>
 </ul>
-
 </div>
 
-<div class="section">
+<div class="box">
 <h2>升級項目</h2>
-
 <ul>
 <li>4.5代 Lommel 黑化鍛造輪框</li>
-<li>中尾段排氣系統</li>
+<li>中尾段排氣管</li>
 <li>紅色卡鉗</li>
-<li>車身精品改裝</li>
+<li>低沉有感聲浪</li>
 </ul>
-
 </div>
 
-<div class="section">
+<div class="box">
 <h2>車況說明</h2>
-
 <ul>
+<li>不可認證</li>
 <li>後尾板有傷</li>
 <li>已整備完成</li>
-<li>不可認證</li>
-<li>里程僅9萬公里</li>
-<li>市場稀有手排車</li>
+<li>里程僅9萬多公里</li>
 </ul>
-
+</div>
 </div>
 
-</div>
-
-<div class="float-contact">
+<div class="float">
 <a href="tel:0928661002" style="background:#25D366;">📞 電話</a>
 <a href="https://line.me/ti/p/0841298889" target="_blank" style="background:#06C755;">LINE</a>
 <a href="https://www.instagram.com/soooong.08" target="_blank" style="background:#E1306C;">IG</a>
@@ -115,26 +96,17 @@ const photos=[
 "images/focus-st-2014/09.jpeg"
 ];
 
-let index=0;
+let i=0;
 const img=document.getElementById("carPhoto");
 const counter=document.getElementById("counter");
 
-function showPhoto(){
-img.src=photos[index];
-counter.innerText=(index+1)+" / "+photos.length;
+function show(){
+img.src=photos[i];
+counter.innerText=(i+1)+" / "+photos.length;
 }
-
-function nextPhoto(){
-index=(index+1)%photos.length;
-showPhoto();
-}
-
-function prevPhoto(){
-index=(index-1+photos.length)%photos.length;
-showPhoto();
-}
-
-showPhoto();
+function nextPhoto(){i=(i+1)%photos.length;show();}
+function prevPhoto(){i=(i-1+photos.length)%photos.length;show();}
+show();
 </script>
 
 </body>
