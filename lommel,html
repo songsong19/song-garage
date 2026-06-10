@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2020 Focus ST-Line Lommel</title>
+
+<style>
+body{
+background:#111;
+color:white;
+font-family:Arial,"Microsoft JhengHei";
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.price{
+color:#FFD700;
+font-size:32px;
+font-weight:bold;
+}
+
+.back{
+display:inline-block;
+margin-bottom:20px;
+color:white;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<a class="back" href="index.html">← 返回車庫首頁</a>
+
+<h1>2020 Focus ST-Line Lommel</h1>
+
+<div class="price">
+售價：50.8萬
+</div>
+
+<p>
+原版件認證車｜里程僅跑8萬公里
+</p>
+
+<img src="images/focus-lommel-2020/01.jpeg">
+<img src="images/focus-lommel-2020/02.jpeg">
+<img src="images/focus-lommel-2020/03.jpeg">
+<img src="images/focus-lommel-2020/04.jpeg">
+<img src="images/focus-lommel-2020/05.jpeg">
+
+<h2>重點配備</h2>
+
+<ul>
+<li>ST-Line Lommel 賽道特化版</li>
+<li>1.5 EcoBoost 182匹渦輪引擎</li>
+<li>8速手自排變速箱</li>
+<li>ST同源賽道級懸吊</li>
+<li>後多連桿懸吊</li>
+<li>18吋ST-Line鋁圈</li>
+<li>前後加大碟盤</li>
+<li>紅色卡鉗</li>
+<li>LV2 Co-Pilot360</li>
+<li>ACC全速域定速</li>
+<li>車道置中輔助</li>
+<li>B&O環艙音響</li>
+<li>Apple CarPlay</li>
+<li>Android Auto</li>
+<li>HUD抬頭顯示器</li>
+<li>Keyless免鑰匙啟動</li>
+<li>倒車顯影</li>
+<li>倒車雷達</li>
+<li>雙區恆溫空調</li>
+<li>ST-Line跑車座椅</li>
+<li>平底方向盤</li>
+</ul>
+
+<h2>車況說明</h2>
+
+<ul>
+<li>原版件</li>
+<li>認證車</li>
+<li>里程8萬公里</li>
+<li>車況漂亮</li>
+<li>可全額貸款</li>
+</ul>
+
+</body>
+</html>
