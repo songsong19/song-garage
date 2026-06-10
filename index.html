@@ -5,76 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小宋車庫｜誠信買賣</title>
 
-<link rel="stylesheet" href="style.css">
-
 <style>
 body{
+    margin:0;
     background:#111;
     color:white;
     font-family:Arial;
-    margin:0;
 }
 
 header{
     background:#000;
-    padding:20px;
     text-align:center;
+    padding:25px;
 }
 
 .container{
     width:95%;
-    max-width:1200px;
+    max-width:1400px;
     margin:auto;
+    padding:20px;
+}
+
+.car-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:20px;
 }
 
 .car-card{
     background:#1a1a1a;
-    margin:30px 0;
     border-radius:15px;
     overflow:hidden;
 }
 
 .car-card img{
     width:100%;
-    display:block;
+    height:240px;
+    object-fit:cover;
 }
 
 .car-info{
-    padding:20px;
+    padding:15px;
 }
 
 .price{
-    color:#ffd700;
-    font-size:28px;
+    color:#FFD700;
+    font-size:24px;
     font-weight:bold;
 }
 
-.gallery{
-    position:relative;
-}
-
-.gallery button{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    background:rgba(0,0,0,.6);
-    color:white;
-    border:none;
-    padding:10px;
-    cursor:pointer;
-    font-size:20px;
-}
-
-.prev{
-    left:10px;
-}
-
-.next{
-    right:10px;
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    padding:10px 15px;
+    border-radius:8px;
+    font-weight:bold;
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
@@ -84,16 +76,11 @@ header{
 
 <div class="container">
 
+<div class="car-grid">
+
 <div class="car-card">
 
-<div class="gallery">
-
-<img id="c43-gallery" src="images/c43-amg-2016/01.jpeg">
-
-<button class="prev" onclick="prevPhoto()">❮</button>
-<button class="next" onclick="nextPhoto()">❯</button>
-
-</div>
+<img src="images/c43-amg-2016/01.jpeg">
 
 <div class="car-info">
 
@@ -103,16 +90,9 @@ header{
 售價：100萬
 </div>
 
-<ul>
-<li>✓ SAVE認證車</li>
-<li>✓ 367hp V6雙渦輪</li>
-<li>✓ 23P跟車系統</li>
-<li>✓ 柏林之音</li>
-<li>✓ 抬頭顯示器</li>
-<li>✓ 全景天窗</li>
-<li>✓ 夜色套件</li>
-<li>✓ 紅色真皮內裝</li>
-</ul>
+<a class="btn" href="c43.html">
+查看詳情
+</a>
 
 </div>
 
@@ -120,56 +100,7 @@ header{
 
 </div>
 
-<script>
-
-const c43Photos = [
-
-"images/c43-amg-2016/01.jpeg",
-"images/c43-amg-2016/02.jpeg",
-"images/c43-amg-2016/03.jpeg",
-"images/c43-amg-2016/04.png",
-"images/c43-amg-2016/05.png",
-"images/c43-amg-2016/06.png",
-"images/c43-amg-2016/07.png",
-"images/c43-amg-2016/08.png",
-"images/c43-amg-2016/09.png",
-"images/c43-amg-2016/10.jpeg",
-"images/c43-amg-2016/11.jpeg",
-"images/c43-amg-2016/12.jpeg",
-"images/c43-amg-2016/13.jpeg",
-"images/c43-amg-2016/14.jpeg",
-"images/c43-amg-2016/15.jpeg",
-"images/c43-amg-2016/16.jpeg"
-
-];
-
-let currentPhoto = 0;
-
-function nextPhoto(){
-
-currentPhoto++;
-
-if(currentPhoto>=c43Photos.length){
-currentPhoto=0;
-}
-
-document.getElementById("c43-gallery").src=c43Photos[currentPhoto];
-
-}
-
-function prevPhoto(){
-
-currentPhoto--;
-
-if(currentPhoto<0){
-currentPhoto=c43Photos.length-1;
-}
-
-document.getElementById("c43-gallery").src=c43Photos[currentPhoto];
-
-}
-
-</script>
+</div>
 
 </body>
 </html>
