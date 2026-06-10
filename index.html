@@ -14,7 +14,15 @@ header{background:url('images/c43-amg-2016/01.jpeg') center center/cover;padding
 .hero-text{font-size:20px;margin-top:15px;color:white;line-height:1.8}
 .hero-contact{margin-top:25px;font-size:18px;line-height:1.8;color:white}
 
+.service-section{max-width:1200px;margin:30px auto 0;padding:0 28px}
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.service-card{background:#1b1b1b;border:1px solid #333;border-radius:18px;padding:26px;box-shadow:0 0 14px rgba(0,0,0,.65)}
+.service-card h2{font-size:30px;color:#FFD700;margin:0 0 12px}
+.service-card p{font-size:18px;line-height:1.8;color:#ddd}
+.service-card a{display:block;text-align:center;background:#FFD700;color:#000;text-decoration:none;border-radius:10px;padding:14px;font-size:20px;font-weight:bold;margin-top:18px}
+
 .container{max-width:1200px;margin:auto;padding:28px}
+.section-title{font-size:32px;color:#FFD700;margin:10px 0 24px;text-align:center}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 
 .card{background:#1b1b1b;border-radius:16px;overflow:hidden;box-shadow:0 0 14px rgba(0,0,0,.65);border:1px solid #292929}
@@ -30,6 +38,7 @@ header{background:url('images/c43-amg-2016/01.jpeg') center center/cover;padding
 
 @media(max-width:900px){
 .grid{grid-template-columns:repeat(2,1fr)}
+.service-grid{grid-template-columns:1fr}
 .card img{height:220px}
 .hero-box h1{font-size:42px}
 }
@@ -42,6 +51,7 @@ header{padding:80px 16px}
 .hero-box h1{font-size:36px}
 .hero-sub{font-size:22px}
 .hero-text{font-size:18px}
+.service-section{padding:0 18px}
 }
 </style>
 </head>
@@ -61,7 +71,31 @@ header{padding:80px 16px}
 </div>
 </header>
 
+<section class="service-section">
+<div class="service-grid">
+
+<div class="service-card">
+<h2>🔎 代客尋車</h2>
+<p>
+找不到喜歡的車？告訴小宋你的品牌、車型、預算、年份需求，我幫你全台協尋適合車源。
+</p>
+<a href="https://line.me/ti/p/0841298889" target="_blank">我要委託尋車</a>
+</div>
+
+<div class="service-card">
+<h2>💰 線上估車</h2>
+<p>
+想賣車？提供年份、車型、里程、車況與照片，小宋幫你快速評估行情與收購條件。
+</p>
+<a href="https://line.me/ti/p/0841298889" target="_blank">我要線上估車</a>
+</div>
+
+</div>
+</section>
+
 <div class="container">
+<h2 class="section-title">🔥 精選在庫車輛</h2>
+
 <div class="grid">
 
 <div class="card"><img src="images/c43-amg-2016/01.jpeg"><div class="info"><h2>2016 Mercedes-Benz C43 AMG</h2><div class="price">100萬</div><div class="tag">SAVE認證｜23P跟車｜柏林之音</div><a class="btn" href="c43.html">查看詳情</a></div></div>
