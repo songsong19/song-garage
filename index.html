@@ -7,47 +7,169 @@
 
 <link rel="stylesheet" href="style.css">
 
-</head>
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Arial;
+    margin:0;
+}
 
+header{
+    background:#000;
+    padding:20px;
+    text-align:center;
+}
+
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.car-card{
+    background:#1a1a1a;
+    margin:30px 0;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.car-card img{
+    width:100%;
+    display:block;
+}
+
+.car-info{
+    padding:20px;
+}
+
+.price{
+    color:#ffd700;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.gallery{
+    position:relative;
+}
+
+.gallery button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,.6);
+    color:white;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+    font-size:20px;
+}
+
+.prev{
+    left:10px;
+}
+
+.next{
+    right:10px;
+}
+</style>
+
+</head>
 <body>
 
 <header>
-    <h1>🚗 小宋車庫｜誠信買賣</h1>
-    <p>實車實價・SAVE認證・全台服務</p>
+<h1>🚗 小宋車庫｜誠信買賣</h1>
+<p>實車實價・SAVE認證・全台服務</p>
 </header>
 
 <div class="container">
 
-    <div class="car-card">
+<div class="car-card">
 
-        <img src="images/c43-amg-2016/02.jpeg">
+<div class="gallery">
 
-        <div class="car-info">
+<img id="c43-gallery" src="images/c43-amg-2016/01.jpeg">
 
-            <h2>2016 Mercedes-Benz C43 AMG</h2>
-
-            <div class="price">
-                售價：100萬
-            </div>
-
-            <ul>
-                <li>✔ 認證車</li>
-                <li>✔ 367hp V6雙渦輪</li>
-                <li>✔ 23P跟車系統</li>
-                <li>✔ 柏林之音</li>
-                <li>✔ 抬頭顯示器</li>
-                <li>✔ 全景天窗</li>
-                <li>✔ 夜色套件</li>
-                <li>✔ 紅色真皮內裝</li>
-            </ul>
-
-        </div>
-
-    </div>
+<button class="prev" onclick="prevPhoto()">❮</button>
+<button class="next" onclick="nextPhoto()">❯</button>
 
 </div>
 
-<script src="script.js"></script>
+<div class="car-info">
+
+<h2>2016 Mercedes-Benz C43 AMG</h2>
+
+<div class="price">
+售價：100萬
+</div>
+
+<ul>
+<li>✓ SAVE認證車</li>
+<li>✓ 367hp V6雙渦輪</li>
+<li>✓ 23P跟車系統</li>
+<li>✓ 柏林之音</li>
+<li>✓ 抬頭顯示器</li>
+<li>✓ 全景天窗</li>
+<li>✓ 夜色套件</li>
+<li>✓ 紅色真皮內裝</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const c43Photos = [
+
+"images/c43-amg-2016/01.jpeg",
+"images/c43-amg-2016/02.jpeg",
+"images/c43-amg-2016/03.jpeg",
+"images/c43-amg-2016/04.png",
+"images/c43-amg-2016/05.png",
+"images/c43-amg-2016/06.png",
+"images/c43-amg-2016/07.png",
+"images/c43-amg-2016/08.png",
+"images/c43-amg-2016/09.png",
+"images/c43-amg-2016/10.jpeg",
+"images/c43-amg-2016/11.jpeg",
+"images/c43-amg-2016/12.jpeg",
+"images/c43-amg-2016/13.jpeg",
+"images/c43-amg-2016/14.jpeg",
+"images/c43-amg-2016/15.jpeg",
+"images/c43-amg-2016/16.jpeg"
+
+];
+
+let currentPhoto = 0;
+
+function nextPhoto(){
+
+currentPhoto++;
+
+if(currentPhoto>=c43Photos.length){
+currentPhoto=0;
+}
+
+document.getElementById("c43-gallery").src=c43Photos[currentPhoto];
+
+}
+
+function prevPhoto(){
+
+currentPhoto--;
+
+if(currentPhoto<0){
+currentPhoto=c43Photos.length-1;
+}
+
+document.getElementById("c43-gallery").src=c43Photos[currentPhoto];
+
+}
+
+</script>
 
 </body>
 </html>
