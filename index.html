@@ -24,6 +24,10 @@ header{background:url('images/c43-amg-2016/01.jpeg') center center/cover;padding
 .hero-text{font-size:20px;margin-top:15px;color:white;line-height:1.8}
 .hero-contact{margin-top:25px;font-size:18px;line-height:1.8;color:white}
 
+.navbar{background:#000;padding:15px 20px;display:flex;justify-content:center;align-items:center;gap:40px;border-bottom:1px solid #333;position:sticky;top:0;z-index:9999;box-shadow:0 2px 10px rgba(0,0,0,.4)}
+.navbar a{color:#FFD700;text-decoration:none;font-size:18px;font-weight:bold}
+.navbar a:hover{color:#fff}
+
 .service-section,.recommend-section,.case-section,.map-section{max-width:1200px;margin:30px auto 0;padding:0 28px;position:relative;z-index:10}
 .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .recommend-grid,.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -68,11 +72,18 @@ header{padding:80px 16px}
 .hero-sub{font-size:22px}
 .hero-text{font-size:18px}
 .service-section,.recommend-section,.case-section,.map-section{padding:0 18px}
+.navbar{gap:24px;padding:13px 12px}
+.navbar a{font-size:16px}
 }
 </style>
 </head>
 
 <body>
+
+<nav class="navbar">
+<a href="index.html">🏠 首頁</a>
+<a href="about.html">👨 關於小宋</a>
+</nav>
 
 <header>
 <div class="hero-box">
