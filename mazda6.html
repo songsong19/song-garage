@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2017 Mazda6 Wagon 2.2D</title>
 
+<style>
+body{margin:0;background:#111;color:white;font-family:"Microsoft JhengHei",Arial,sans-serif}
+.wrap{max-width:1000px;margin:auto;padding:20px}
+.back{display:inline-block;color:white;text-decoration:none;margin-bottom:18px;font-size:20px}
+h1{font-size:36px;margin:10px 0}
+.price{color:#FFD700;font-size:42px;font-weight:bold;margin:12px 0}
+.desc{font-size:22px;color:#ddd;line-height:1.8}
+.photo-box{background:#000;border-radius:18px;overflow:hidden;margin:20px 0}
+.photo-box img{width:100%;max-height:620px;object-fit:contain;display:block;background:#000}
+.controls{display:flex;gap:12px;margin:12px 0}
+.controls button{flex:1;background:#FFD700;color:#000;border:0;border-radius:12px;padding:14px;font-size:20px;font-weight:bold}
+.counter{text-align:center;color:#FFD700;font-size:20px;margin:10px 0}
+.section{background:#1b1b1b;border-radius:16px;padding:22px;margin-top:22px;border:1px solid #333}
+.section h2{font-size:30px;margin:0 0 15px;border-left:5px solid #FFD700;padding-left:12px}
+.section ul{font-size:22px;line-height:2;margin:0;padding-left:28px}
+.float-contact{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:9999}
+.float-contact a{padding:0;background:none;box-shadow:none}
+.float-contact img{width:60px;height:60px;border-radius:50%;display:block}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+<a class="back" href="index.html">← 返回車庫首頁</a>
+
+<h1>2017 Mazda6 Wagon Diesel 2.2</h1>
+<div class="price">售價：32.8萬</div>
+<div class="desc">
+2.2柴油渦輪｜15萬公里｜原版件可認證｜全原廠保養｜引擎原廠終身保固
+</div>
+
+<div class="photo-box">
+<img id="carPhoto" src="">
+</div>
+
+<div class="counter" id="counter"></div>
+
+<div class="controls">
+<button onclick="prevPhoto()">← 上一張</button>
+<button onclick="nextPhoto()">下一張 →</button>
+</div>
+
+<div class="section">
+<h2>基本資料</h2>
+<ul>
+<li>車型：Mazda6 Wagon</li>
+<li>年份：2017年式</li>
+<li>排氣量：2191cc</li>
+<li>引擎：2.2 柴油渦輪</li>
+<li>變速箱：6速手自排</li>
+<li>驅動方式：前輪驅動</li>
+<li>燃料：柴油</li>
+<li>里程：15萬公里</li>
+<li>車色：深藍色</li>
+<li>座位數：5人座</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>重點配備</h2>
+<ul>
+<li>BOSE 音響</li>
+<li>電動記憶座椅</li>
+<li>雙區恆溫空調</li>
+<li>HUD 抬頭顯示器</li>
+<li>IKEY 免鑰匙啟動系統</li>
+<li>盲點偵測</li>
+<li>倒車顯影</li>
+<li>定速巡航</li>
+<li>TPMS 胎壓顯示</li>
+<li>電子手煞車</li>
+<li>Mazda Connect 多媒體系統</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>升級項目</h2>
+<ul>
+<li>電動尾門</li>
+<li>19吋鋁圈</li>
+<li>懸浮碟盤</li>
+<li>加大卡鉗</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>車況特色</h2>
+<ul>
+<li>全原廠保養紀錄</li>
+<li>里程保證 15 萬公里</li>
+<li>原版件可認證</li>
+<li>引擎原廠終身保固</li>
+<li>實車實價</li>
+</ul>
+</div>
+
+</div>
+
+<div class="float-contact">
+<a href="tel:0928661002">
+<img src="images/icons/phone.png">
+</a>
+
+<a href="https://line.me/ti/p/0841298889" target="_blank">
+<img src="images/icons/line.png">
+</a>
+
+<a href="https://www.instagram.com/soooong.08?igsh=ejEwMGxwd2Z0OTV1&utm_source=qr" target="_blank">
+<img src="images/icons/instagram.png">
+</a>
+
+<a href="https://www.facebook.com/share/1Xzoa71JSu/?mibextid=wwXIfr" target="_blank">
+<img src="images/icons/facebook.png">
+</a>
+</div>
+
+<script>
+const photos=[
+"images/mazda6-wagon-2017/01.jpeg.jpg",
+"images/mazda6-wagon-2017/02.jpeg.jpg",
+"images/mazda6-wagon-2017/03.jpeg.jpg",
+"images/mazda6-wagon-2017/04.jpeg.jpg",
+"images/mazda6-wagon-2017/05.jpeg.jpg",
+"images/mazda6-wagon-2017/06.jpeg.jpg",
+"images/mazda6-wagon-2017/07.jpeg.jpg",
+"images/mazda6-wagon-2017/08.jpeg.jpg",
+"images/mazda6-wagon-2017/09.jpeg.jpg",
+"images/mazda6-wagon-2017/10.jpeg.jpg",
+"images/mazda6-wagon-2017/11.jpeg.jpg",
+"images/mazda6-wagon-2017/12.jpeg.jpg",
+"images/mazda6-wagon-2017/13.jpeg.jpg",
+"images/mazda6-wagon-2017/14.jpeg.jpg",
+"images/mazda6-wagon-2017/15.jpeg.jpg",
+"images/mazda6-wagon-2017/16.jpeg.jpg",
+"images/mazda6-wagon-2017/17.jpeg.jpg"
+];
+
+let index=0;
+const img=document.getElementById("carPhoto");
+const counter=document.getElementById("counter");
+
+function showPhoto(){
+img.src=photos[index];
+counter.innerText=(index+1)+" / "+photos.length;
+}
+
+function nextPhoto(){
+index=(index+1)%photos.length;
+showPhoto();
+}
+
+function prevPhoto(){
+index=(index-1+photos.length)%photos.length;
+showPhoto();
+}
+
+showPhoto();
+</script>
+
+</body>
+</html>
