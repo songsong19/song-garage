@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2014 Suzuki Swift 1.4</title>
+
+<style>
+body{margin:0;background:#111;color:white;font-family:"Microsoft JhengHei",Arial,sans-serif}
+.wrap{max-width:1000px;margin:auto;padding:20px}
+.back{display:inline-block;color:white;text-decoration:none;margin-bottom:18px;font-size:20px}
+h1{font-size:36px;margin:10px 0}
+.price{color:#FFD700;font-size:42px;font-weight:bold;margin:12px 0}
+.desc{font-size:22px;color:#ddd;line-height:1.8}
+.photo-box{background:#000;border-radius:18px;overflow:hidden;margin:20px 0}
+.photo-box img{width:100%;max-height:620px;object-fit:contain;display:block;background:#000}
+.controls{display:flex;gap:12px;margin:12px 0}
+.controls button{flex:1;background:#FFD700;color:#000;border:0;border-radius:12px;padding:14px;font-size:20px;font-weight:bold}
+.counter{text-align:center;color:#FFD700;font-size:20px;margin:10px 0}
+.section{background:#1b1b1b;border-radius:16px;padding:22px;margin-top:22px;border:1px solid #333}
+.section h2{font-size:30px;margin:0 0 15px;border-left:5px solid #FFD700;padding-left:12px}
+.section ul{font-size:22px;line-height:2;margin:0;padding-left:28px}
+.float-contact{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:9999}
+.float-contact a{padding:0;background:none;box-shadow:none}
+.float-contact img{width:60px;height:60px;border-radius:50%;display:block}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+<a class="back" href="index.html">← 返回車庫首頁</a>
+
+<h1>2014 Suzuki Swift 1.4</h1>
+<div class="price">售價：19.8萬</div>
+<div class="desc">
+認證車｜漂亮車｜里程11萬公里｜省油好開｜市區代步首選
+</div>
+
+<div class="photo-box">
+<img id="carPhoto" src="">
+</div>
+
+<div class="counter" id="counter"></div>
+
+<div class="controls">
+<button onclick="prevPhoto()">← 上一張</button>
+<button onclick="nextPhoto()">下一張 →</button>
+</div>
+
+<div class="section">
+<h2>基本資料</h2>
+<ul>
+<li>車型：Suzuki Swift</li>
+<li>年份：2014年式</li>
+<li>排氣量：1.4L</li>
+<li>燃料：汽油</li>
+<li>里程：11萬公里</li>
+<li>車色：白色</li>
+<li>座位數：5人座</li>
+<li>車況：認證車、漂亮車</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>重點配備</h2>
+<ul>
+<li>Keyless 免鑰匙啟動</li>
+<li>HID 頭燈</li>
+<li>方向盤快控鍵</li>
+<li>定速巡航</li>
+<li>安卓多媒體主機</li>
+<li>倒車雷達</li>
+<li>自排變速箱</li>
+<li>後雨刷</li>
+<li>6/4 分離後座</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>車況特色</h2>
+<ul>
+<li>里程保證 11 萬公里</li>
+<li>車況漂亮</li>
+<li>省油好養</li>
+<li>車身小巧好停車</li>
+<li>市區代步、新手入門首選</li>
+<li>實車實價</li>
+</ul>
+</div>
+
+</div>
+
+<div class="float-contact">
+<a href="tel:0928661002">
+<img src="images/icons/phone.png">
+</a>
+
+<a href="https://line.me/ti/p/0841298889" target="_blank">
+<img src="images/icons/line.png">
+</a>
+
+<a href="https://www.instagram.com/soooong.08?igsh=ejEwMGxwd2Z0OTV1&utm_source=qr" target="_blank">
+<img src="images/icons/instagram.png">
+</a>
+
+<a href="https://www.facebook.com/share/1Xzoa71JSu/?mibextid=wwXIfr" target="_blank">
+<img src="images/icons/facebook.png">
+</a>
+</div>
+
+<script>
+const photos=[
+"images/swift-2014/01.jpg",
+"images/swift-2014/02.jpg",
+"images/swift-2014/03.jpg",
+"images/swift-2014/04.jpg",
+"images/swift-2014/05.jpg",
+"images/swift-2014/06.jpg",
+"images/swift-2014/07.jpg",
+"images/swift-2014/08.jpg",
+"images/swift-2014/09.jpg"
+];
+
+let index=0;
+const img=document.getElementById("carPhoto");
+const counter=document.getElementById("counter");
+
+function showPhoto(){
+img.src=photos[index];
+counter.innerText=(index+1)+" / "+photos.length;
+}
+
+function nextPhoto(){
+index=(index+1)%photos.length;
+showPhoto();
+}
+
+function prevPhoto(){
+index=(index-1+photos.length)%photos.length;
+showPhoto();
+}
+
+showPhoto();
+</script>
+
+</body>
+</html>
