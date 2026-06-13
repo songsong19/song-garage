@@ -1,7 +1,132 @@
-<div class="about-photo-placeholder">
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>關於小宋｜小宋車庫｜誠信買賣</title>
 
-🚗 小宋車庫
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B24CH14PP6"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-B24CH14PP6');
+</script>
 
-照片準備中
+<style>
+body{margin:0;background:#0f0f0f;color:white;font-family:"Microsoft JhengHei",Arial,sans-serif}
+.container{max-width:1100px;margin:auto;padding:28px}
+.hero{background:linear-gradient(135deg,#111,#1f1f1f);padding:80px 24px;text-align:center;border-bottom:1px solid #333}
+.hero h1{font-size:46px;color:#FFD700;margin:0 0 18px}
+.hero p{font-size:22px;line-height:1.8;color:#ddd;margin:0}
+.section{background:#1b1b1b;border:1px solid #333;border-radius:18px;padding:28px;margin:28px 0;box-shadow:0 0 14px rgba(0,0,0,.65)}
+.section h2{color:#FFD700;font-size:32px;margin:0 0 18px}
+.section p{font-size:18px;line-height:2;color:#ddd}
+.placeholder{border:1px dashed #FFD700;border-radius:18px;padding:50px 20px;text-align:center;color:#FFD700;font-size:26px;background:#111;margin-top:20px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:#111;border:1px solid #333;border-radius:16px;padding:22px}
+.card h3{color:#FFD700;font-size:24px;margin:0 0 10px}
+.card p{font-size:17px;line-height:1.8;color:#ddd;margin:0}
+.process{font-size:20px;line-height:2.2;color:#ddd}
+.btn{display:inline-block;background:#FFD700;color:#000;text-decoration:none;border-radius:10px;padding:14px 26px;font-size:20px;font-weight:bold;margin:8px}
+.float-contact{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:9999}
+.float-contact a{padding:0;background:none;box-shadow:none}
+.float-contact img{width:60px;height:60px;border-radius:50%;display:block}
+footer{background:#000;padding:38px 20px;margin-top:50px;text-align:center;color:#777;border-top:1px solid #333}
+
+@media(max-width:700px){
+.hero h1{font-size:36px}
+.hero p{font-size:18px}
+.grid{grid-template-columns:1fr}
+.section{padding:22px}
+.section h2{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<h1>🚗 關於小宋車庫</h1>
+<p>買車不只是交易，更是一份信任。<br>小宋車庫，誠信買賣，實車實價。</p>
+</section>
+
+<div class="container">
+
+<section class="section">
+<h2>我是小宋</h2>
+<p>
+大家好，我是小宋。<br>
+因為熱愛汽車，投入中古車買賣服務。<br>
+我知道很多人買中古車最擔心的就是車況不透明、價格不透明，或是買到問題車。
+</p>
+<p>
+所以小宋車庫堅持以誠信為本，提供實車實價、車況透明、認證把關與售後協助，
+希望每位客人都能找到真正適合自己的車。
+</p>
+
+<div class="placeholder">
+🚗 小宋車庫<br>
+形象照片預留區
+</div>
+</section>
+
+<section class="section">
+<h2>小宋車庫堅持</h2>
+<div class="grid">
+<div class="card"><h3>實車實價</h3><p>車輛資訊透明，不用話術包裝，讓客人清楚了解車況與價格。</p></div>
+<div class="card"><h3>車況透明</h3><p>賞車前清楚說明配備、車況與注意事項，降低買車疑慮。</p></div>
+<div class="card"><h3>SAVE認證</h3><p>配合認證車聯盟，協助客人用更安心的方式挑選車輛。</p></div>
+<div class="card"><h3>售後協助</h3><p>交車不是結束，後續用車、保養與問題也會盡力協助。</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2>服務項目</h2>
+<div class="grid">
+<div class="card"><h3>優質中古車買賣</h3><p>嚴選在庫車輛，提供多種品牌與預算選擇。</p></div>
+<div class="card"><h3>代客尋車</h3><p>告訴小宋你的需求，我幫你全台協尋適合車源。</p></div>
+<div class="card"><h3>線上估車</h3><p>提供年份、車型、里程與照片，協助快速評估行情。</p></div>
+<div class="card"><h3>全台服務</h3><p>支援視訊賞車、來店賞車、到府看車與交車安排。</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2>購車流程</h2>
+<div class="process">
+① 聯絡小宋，告訴我你的需求<br>
+② 預約賞車或視訊看車<br>
+③ 確認車況、配備與價格<br>
+④ 安排成交與交車流程<br>
+⑤ 交車後持續售後協助
+</div>
+</section>
+
+<section class="section" style="text-align:center;">
+<h2>聯絡小宋</h2>
+<p>
+📍 新北市三峽區介壽路二段87-1號<br>
+📞 0928-661002<br>
+📱 LINE：084129889<br>
+📷 Instagram：@soooong.08
+</p>
+
+<a class="btn" href="https://line.me/ti/p/084129889" target="_blank">加入 LINE</a>
+<a class="btn" href="index.html">回首頁</a>
+</section>
 
 </div>
+
+<footer>
+© 2026 小宋車庫 Song Garage
+</footer>
+
+<div class="float-contact">
+<a href="tel:0928661002"><img src="images/icons/phone.png"></a>
+<a href="https://line.me/ti/p/084129889" target="_blank"><img src="images/icons/line.png"></a>
+<a href="https://www.instagram.com/soooong.08?igsh=ejEwMGxwd2Z0OTV1&utm_source=qr" target="_blank"><img src="images/icons/instagram.png"></a>
+<a href="https://www.facebook.com/share/1Xzoa71JSu/?mibextid=wwXIfr" target="_blank"><img src="images/icons/facebook.png"></a>
+</div>
+
+</body>
+</html>
