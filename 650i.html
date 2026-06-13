@@ -52,7 +52,7 @@
 <li>引擎運轉安靜</li>
 <li>底盤扎實無異音</li>
 <li>V8雙渦輪動力充沛</li>
-<li>配備選滿</li>
+<li>配備選配滿載</li>
 <li>歡迎現場賞車試車</li>
 </ul>
 </div>
@@ -68,3 +68,43 @@
 <li>買漂亮車靠緣分，有緣就放心交給小宋</li>
 </ul>
 </div>
+
+<script>
+const photos=[
+"images/bmw-650i-2012/01.jpg",
+"images/bmw-650i-2012/02.jpg",
+"images/bmw-650i-2012/03.jpg",
+"images/bmw-650i-2012/04.jpg",
+"images/bmw-650i-2012/05.jpg",
+"images/bmw-650i-2012/06.jpg",
+"images/bmw-650i-2012/07.jpg",
+"images/bmw-650i-2012/08.jpg",
+"images/bmw-650i-2012/09.jpg",
+"images/bmw-650i-2012/10.jpg",
+"images/bmw-650i-2012/11.jpg",
+"images/bmw-650i-2012/12.jpg",
+"images/bmw-650i-2012/13.jpg",
+"images/bmw-650i-2012/14.jpg"
+];
+
+let index=0;
+const img=document.getElementById("carPhoto");
+const counter=document.getElementById("counter");
+
+function showPhoto(){
+img.src=photos[index];
+counter.innerText=(index+1)+" / "+photos.length;
+}
+
+function nextPhoto(){
+index=(index+1)%photos.length;
+showPhoto();
+}
+
+function prevPhoto(){
+index=(index-1+photos.length)%photos.length;
+showPhoto();
+}
+
+showPhoto();
+</script>
