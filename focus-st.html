@@ -3,9 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2014 Focus ST 6MT</title>
+<title>2014 Ford Focus ST 6MT｜小宋車庫</title>
+
 <style>
 body{margin:0;background:#111;color:white;font-family:"Microsoft JhengHei",Arial,sans-serif}
+.nav{background:#000;border-bottom:1px solid #333;position:sticky;top:0;z-index:999}
+.nav-inner{max-width:960px;margin:auto;padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.logo{color:#FFD700;text-decoration:none;font-size:24px;font-weight:bold}
+.menu{display:flex;gap:15px;flex-wrap:wrap}
+.menu a{color:#fff;text-decoration:none;font-size:18px;font-weight:bold}
+.menu a:hover{color:#FFD700}
 .wrap{max-width:960px;margin:auto;padding:18px}
 .back{display:block;color:white;text-decoration:none;font-size:20px;margin-bottom:18px}
 h1{font-size:34px;margin:8px 0 10px}
@@ -15,21 +22,40 @@ h1{font-size:34px;margin:8px 0 10px}
 .photo img{width:100%;height:520px;object-fit:contain;background:#000;display:block}
 .count{text-align:center;color:#FFD700;font-size:22px;margin:12px 0}
 .controls{display:flex;gap:12px;margin-bottom:20px}
-.controls button{flex:1;padding:15px;background:#FFD700;color:#000;border:0;border-radius:12px;font-size:20px;font-weight:bold}
+.controls button{flex:1;padding:15px;background:#FFD700;color:#000;border:0;border-radius:12px;font-size:20px;font-weight:bold;cursor:pointer}
 .box{background:#1b1b1b;border:1px solid #333;border-radius:16px;padding:22px;margin:18px 0}
 .box h2{font-size:30px;margin:0 0 15px;border-left:5px solid #FFD700;padding-left:12px}
 .box li{font-size:22px;line-height:2}
-.float{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:10px}
+.float{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:10px;z-index:999}
 .float a{color:white;text-decoration:none;padding:12px 18px;border-radius:40px;font-weight:bold;text-align:center}
-@media(max-width:600px){.photo img{height:330px}h1{font-size:30px}.price{font-size:38px}}
+@media(max-width:600px){
+.nav-inner{flex-direction:column;align-items:flex-start;gap:10px}
+.menu a{font-size:16px}
+.photo img{height:330px}
+h1{font-size:30px}
+.price{font-size:38px}
+}
 </style>
 </head>
+
 <body>
+
+<div class="nav">
+<div class="nav-inner">
+<a href="index.html" class="logo">小宋車庫</a>
+<div class="menu">
+<a href="index.html">首頁</a>
+<a href="about.html">關於小宋</a>
+<a href="loan.html">貸款試算</a>
+<a href="https://line.me/ti/p/uOXzpqw-wV" target="_blank">LINE好友</a>
+</div>
+</div>
+</div>
 
 <div class="wrap">
 <a class="back" href="index.html">← 返回車庫首頁</a>
 
-<h1>2014 Focus ST 6MT</h1>
+<h1>2014 Ford Focus ST 6MT</h1>
 <div class="price">售價：39.8萬</div>
 <div class="desc">里程9萬多公里｜6速手排｜RECARO賽車座椅｜已整備完成</div>
 
@@ -79,7 +105,7 @@ h1{font-size:34px;margin:8px 0 10px}
 
 <div class="float">
 <a href="tel:0928661002" style="background:#25D366;">📞 電話</a>
-<a href="https://line.me/ti/p/0841298889" target="_blank" style="background:#06C755;">LINE</a>
+<a href="https://line.me/ti/p/uOXzpqw-wV" target="_blank" style="background:#06C755;">LINE</a>
 <a href="https://www.instagram.com/soooong.08" target="_blank" style="background:#E1306C;">IG</a>
 </div>
 
@@ -104,8 +130,17 @@ function show(){
 img.src=photos[i];
 counter.innerText=(i+1)+" / "+photos.length;
 }
-function nextPhoto(){i=(i+1)%photos.length;show();}
-function prevPhoto(){i=(i-1+photos.length)%photos.length;show();}
+
+function nextPhoto(){
+i=(i+1)%photos.length;
+show();
+}
+
+function prevPhoto(){
+i=(i-1+photos.length)%photos.length;
+show();
+}
+
 show();
 </script>
 
