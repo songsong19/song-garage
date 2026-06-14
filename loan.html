@@ -28,11 +28,12 @@ button{width:100%;background:#FFD700;color:#000;border:0;border-radius:12px;padd
 .float-contact img{width:60px;height:60px;border-radius:50%;display:block}
 footer{background:#000;padding:40px 20px;margin-top:60px;border-top:1px solid #333;text-align:center;color:#777}
 @media(max-width:600px){
-.navbar{gap:22px;padding:13px 10px}
+.navbar{gap:20px;padding:13px 10px;flex-wrap:wrap}
 .navbar a{font-size:16px}
 .hero h1{font-size:34px}
 .container{padding:18px}
 .result h2{font-size:28px}
+.float-contact img{width:56px;height:56px}
 }
 </style>
 </head>
@@ -40,15 +41,16 @@ footer{background:#000;padding:40px 20px;margin-top:60px;border-top:1px solid #3
 <body>
 
 <nav class="navbar">
-<a href="index.html">🏠 首頁</a>
-<a href="about.html">👨 關於小宋</a>
-<a href="loan.html">💰 貸款試算</a>
+<a href="index.html">首頁</a>
+<a href="about.html">關於小宋</a>
+<a href="loan.html">貸款試算</a>
+<a href="https://line.me/ti/p/uOXzpqw-wV" target="_blank">LINE好友</a>
 </nav>
 
 <div class="container">
 
 <section class="hero">
-<h1>💰 貸款試算</h1>
+<h1>貸款試算</h1>
 <p>
 快速查詢車款最低月付，或自行輸入車價、頭期款、期數與利率試算。<br>
 實際金額仍以貸款公司電腦計算結果為準。
@@ -56,7 +58,7 @@ footer{background:#000;padding:40px 20px;margin-top:60px;border-top:1px solid #3
 </section>
 
 <section class="box">
-<h2>🚗 車款快速查月付</h2>
+<h2>車款快速查月付</h2>
 
 <label>選擇車款</label>
 <select id="carSelect" onchange="showCarPayment()">
@@ -90,7 +92,7 @@ footer{background:#000;padding:40px 20px;margin-top:60px;border-top:1px solid #3
 </section>
 
 <section class="box">
-<h2>🧮 自行貸款試算</h2>
+<h2>自行貸款試算</h2>
 
 <label>車價（萬元）</label>
 <input id="carPrice" type="number" placeholder="例如：53.8">
@@ -127,7 +129,7 @@ footer{background:#000;padding:40px 20px;margin-top:60px;border-top:1px solid #3
 <p style="font-size:18px;line-height:1.8;color:#ddd;">
 把想看的車款傳給小宋，幫你依照實際條件試算。
 </p>
-<a href="https://line.me/ti/p/084129889" target="_blank" style="display:block;background:#FFD700;color:#000;text-decoration:none;border-radius:12px;padding:15px;font-size:22px;font-weight:bold;margin-top:18px;">
+<a href="https://line.me/ti/p/uOXzpqw-wV" target="_blank" style="display:block;background:#FFD700;color:#000;text-decoration:none;border-radius:12px;padding:15px;font-size:22px;font-weight:bold;margin-top:18px;">
 加入 LINE 詢問
 </a>
 </section>
@@ -140,8 +142,8 @@ footer{background:#000;padding:40px 20px;margin-top:60px;border-top:1px solid #3
 
 <div class="float-contact">
 <a href="tel:0928661002"><img src="images/icons/phone.png"></a>
-<a href="https://line.me/ti/p/084129889" target="_blank"><img src="images/icons/line.png"></a>
-<a href="https://www.instagram.com/soooong.08?igsh=ejEwMGxwd2Z0OTV1&utm_source=qr" target="_blank"><img src="images/icons/instagram.png"></a>
+<a href="https://line.me/ti/p/uOXzpqw-wV" target="_blank"><img src="images/icons/line.png"></a>
+<a href="https://www.instagram.com/soooong.08" target="_blank"><img src="images/icons/instagram.png"></a>
 <a href="https://www.facebook.com/share/1Xzoa71JSu/?mibextid=wwXIfr" target="_blank"><img src="images/icons/facebook.png"></a>
 </div>
 
