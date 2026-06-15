@@ -117,6 +117,41 @@ font-size:22px;
 line-height:2.2;
 }
 
+form label{
+display:block;
+color:#FFD700;
+font-weight:bold;
+margin:18px 0 8px;
+font-size:18px;
+}
+
+form input,
+form textarea,
+form select{
+width:100%;
+box-sizing:border-box;
+padding:14px;
+border-radius:10px;
+border:1px solid #444;
+background:#111;
+color:white;
+font-size:17px;
+font-family:"Microsoft JhengHei",Arial,sans-serif;
+}
+
+.form-btn{
+width:100%;
+margin-top:25px;
+background:#FFD700;
+color:#000;
+border:0;
+border-radius:10px;
+padding:16px;
+font-size:22px;
+font-weight:bold;
+cursor:pointer;
+}
+
 .cta{
 text-align:center;
 padding:70px 20px;
@@ -142,6 +177,11 @@ color:#888;
 }
 
 @media(max-width:768px){
+
+.navbar{
+gap:20px;
+flex-wrap:wrap;
+}
 
 .grid{
 grid-template-columns:1fr;
@@ -213,7 +253,6 @@ font-size:18px;
 <h2 class="section-title">尋車流程</h2>
 
 <div class="process">
-
 提出需求<br>
 ↓<br>
 加入 LINE 討論<br>
@@ -225,7 +264,6 @@ font-size:18px;
 賞車驗車<br>
 ↓<br>
 成交交車
-
 </div>
 
 </section>
@@ -235,19 +273,54 @@ font-size:18px;
 <h2 class="section-title">尋車保障方案</h2>
 
 <div class="guarantee">
-
 ✓ 找不到車，全額退還<br>
-
 ✓ 不買車，全額退還<br>
-
 ✓ 在其他車商買到車，全額退還<br>
-
 ✓ 車況不符合期待，全額退還<br>
-
 ✓ 不收任何違約金
-
 </div>
 
+</section>
+
+<section class="section">
+<h2 class="section-title">尋車需求表單</h2>
+
+<div class="card">
+<form onsubmit="sendFindCarForm(); return false;">
+
+<label>姓名</label>
+<input id="name" type="text" required>
+
+<label>聯絡電話</label>
+<input id="phone" type="text" required>
+
+<label>想找的品牌 / 車型</label>
+<input id="car" type="text" placeholder="例如：BMW 320i、RAV4、Focus ST" required>
+
+<label>預算範圍</label>
+<input id="budget" type="text" placeholder="例如：30～50萬" required>
+
+<label>年份需求</label>
+<input id="year" type="text" placeholder="例如：2018年後">
+
+<label>里程需求</label>
+<input id="mileage" type="text" placeholder="例如：10萬公里內">
+
+<label>購車方式</label>
+<select id="payment">
+<option value="尚未決定">尚未決定</option>
+<option value="現金">現金</option>
+<option value="貸款">貸款</option>
+<option value="現金或貸款都可">現金或貸款都可</option>
+</select>
+
+<label>其他需求</label>
+<textarea id="note" rows="5" placeholder="例如：不要事故車、需要認證車、指定顏色、希望原鈑件"></textarea>
+
+<button type="submit" class="form-btn">送出需求到 LINE</button>
+
+</form>
+</div>
 </section>
 
 <section class="section">
@@ -257,13 +330,11 @@ font-size:18px;
 <h2>小宋車庫承諾</h2>
 
 <p>
-
 本服務所收取之尋車保障金，並非購車定金，也不是違約金。
-
+<br><br>
 其用途僅為確認委託關係成立，並投入更多時間與資源協助尋找符合需求之車輛。
-
+<br><br>
 若最終未完成交易，保障金全額退還。
-
 </p>
 
 </div>
@@ -289,10 +360,36 @@ font-size:18px;
 </section>
 
 <footer>
-
 © 2026 小宋車庫 Song Garage
-
 </footer>
+
+<script>
+function sendFindCarForm(){
+const name=document.getElementById('name').value;
+const phone=document.getElementById('phone').value;
+const car=document.getElementById('car').value;
+const budget=document.getElementById('budget').value;
+const year=document.getElementById('year').value;
+const mileage=document.getElementById('mileage').value;
+const payment=document.getElementById('payment').value;
+const note=document.getElementById('note').value;
+
+const message=
+`您好小宋，我想委託尋車
+
+姓名：${name}
+電話：${phone}
+想找車款：${car}
+預算範圍：${budget}
+年份需求：${year}
+里程需求：${mileage}
+購車方式：${payment}
+其他需求：${note}`;
+
+const encodedMessage=encodeURIComponent(message);
+window.open(`https://line.me/R/msg/text/?${encodedMessage}`,'_blank');
+}
+</script>
 
 </body>
 </html>
