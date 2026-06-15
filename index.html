@@ -61,6 +61,82 @@ header{background:url('images/c43-amg-2016/01.jpeg') center center/cover;padding
 .float-contact{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:9999}
 .float-contact a{color:white;padding:12px 18px;border-radius:50px;text-decoration:none;font-weight:bold;text-align:center;box-shadow:0 0 10px rgba(0,0,0,.5)}
 
+
+.findcar-section{
+max-width:1200px;
+margin:35px auto 0;
+padding:0 28px;
+position:relative;
+z-index:10;
+}
+
+.findcar-section::before{
+content:"";
+display:block;
+background:linear-gradient(135deg,#111,#1d1d1d);
+border:1px solid #FFD700;
+border-radius:18px;
+box-shadow:0 0 14px rgba(0,0,0,.65);
+position:absolute;
+left:28px;
+right:28px;
+top:0;
+bottom:0;
+z-index:-1;
+}
+
+.findcar-section{
+padding-top:30px;
+padding-bottom:30px;
+}
+
+.findcar-section h2{
+color:#FFD700;
+font-size:34px;
+margin:0 0 15px;
+text-align:center;
+}
+
+.findcar-section p{
+font-size:20px;
+line-height:1.8;
+color:#ddd;
+text-align:center;
+margin:0;
+}
+
+.findcar-highlight{
+background:#FFD700;
+color:#000;
+font-weight:bold;
+font-size:20px;
+padding:18px;
+border-radius:12px;
+text-align:center;
+margin:25px auto;
+max-width:1000px;
+line-height:1.6;
+}
+
+.btn-main{
+display:block;
+width:260px;
+margin:20px auto 0;
+background:#FFD700;
+color:#000;
+text-decoration:none;
+text-align:center;
+padding:15px;
+font-size:20px;
+font-weight:bold;
+border-radius:10px;
+}
+
+.btn-main:hover{
+background:#fff;
+}
+
+
 @media(max-width:900px){
 .grid,.recommend-grid,.case-grid{grid-template-columns:repeat(2,1fr)}
 .service-grid{grid-template-columns:1fr}
@@ -81,6 +157,33 @@ header{padding:80px 16px}
 .service-section,.recommend-section,.case-section,.map-section{padding:0 18px}
 .navbar{gap:20px;padding:13px 12px;flex-wrap:wrap}
 .navbar a{font-size:16px}
+
+.findcar-section{
+padding:26px 18px;
+}
+
+.findcar-section::before{
+left:18px;
+right:18px;
+}
+
+.findcar-section h2{
+font-size:28px;
+}
+
+.findcar-section p{
+font-size:17px;
+}
+
+.findcar-highlight{
+font-size:17px;
+}
+
+.btn-main{
+width:auto;
+max-width:260px;
+font-size:18px;
+}
 }
 </style>
 </head>
@@ -90,6 +193,7 @@ header{padding:80px 16px}
 <nav class="navbar">
 <a href="index.html">首頁</a>
 <a href="about.html">關於小宋</a>
+<a href="findcar.html">委託尋車</a>
 <a href="loan.html">貸款試算</a>
 <a href="https://line.me/ti/p/uOXzpqw-wV" target="_blank">LINE好友</a>
 </nav>
