@@ -1,141 +1,407 @@
-<section class="section">
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h2 class="section-title">
-委託尋車保障書
-</h2>
+<title>委託尋車｜小宋車庫 Song Garage</title>
 
-<div class="card" style="
+<style>
+html,
+body{
+margin:0;
+background:#0f0f0f !important;
+color:white;
+font-family:"Microsoft JhengHei",Arial,sans-serif;
+}
+
+.navbar{
+background:#000;
+padding:15px 20px;
+display:flex;
+justify-content:center;
+gap:40px;
+border-bottom:1px solid #333;
+position:sticky;
+top:0;
+z-index:9999;
+}
+
+.navbar a{
+color:#FFD700;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+}
+
+.navbar a:hover{
+color:#fff;
+}
+
+.hero{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,#111,#1b1b1b);
+}
+
+.hero h1{
+font-size:52px;
+color:#FFD700;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+line-height:1.8;
+color:#ddd;
 max-width:900px;
 margin:auto;
-background:#1b1b1b;
-color:white;
-">
+}
 
-<p style="
-font-size:20px;
+.section{
+max-width:1200px;
+margin:auto;
+padding:60px 25px;
+background:#0f0f0f;
+}
+
+.section-title{
+font-size:36px;
+color:#FFD700;
+text-align:center;
+margin-bottom:40px;
+}
+
+.card{
+background:#1b1b1b !important;
+border:1px solid #333;
+border-radius:18px;
+padding:25px;
+margin-bottom:25px;
+color:white;
+box-shadow:0 0 14px rgba(0,0,0,.65);
+}
+
+.card h2{
+color:#FFD700;
+margin-top:0;
+}
+
+.card p{
+line-height:1.8;
+font-size:18px;
+color:#ddd;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.feature{
+background:#1b1b1b;
+padding:25px;
+border-radius:18px;
+text-align:center;
+border:1px solid #333;
+}
+
+.feature h3{
+color:#FFD700;
+}
+
+.feature p{
+color:#ddd;
+line-height:1.8;
+}
+
+.guarantee{
+background:#FFD700;
+color:#000;
+padding:35px;
+border-radius:18px;
+font-size:22px;
+font-weight:bold;
 line-height:2;
 text-align:center;
+}
+
+.process{
+text-align:center;
+font-size:22px;
+line-height:2.2;
 color:#ddd;
-">
+}
 
-為提供客戶更安心的購車體驗，
+.guarantee-card{
+max-width:900px;
+margin:auto;
+background:#1b1b1b !important;
+color:white;
+border:1px solid #333;
+border-radius:18px;
+padding:35px;
+box-shadow:0 0 14px rgba(0,0,0,.65);
+}
 
-小宋車庫提供委託尋車保障服務。
+.guarantee-card p,
+.guarantee-card div{
+color:#ddd;
+}
 
-<br><br>
-
-尋車保障金僅作為委託關係確認用途，
-
-並非購車定金、違約金或強制成交費用。
-
-</p>
-
-<hr style="
-border:0;
-border-top:1px solid #333;
-margin:35px 0;
-">
-
-<h3 style="
+.guarantee-title{
 color:#FFD700;
 font-size:26px;
 text-align:center;
 margin-bottom:25px;
-">
-全額退還條件
-</h3>
+}
 
-<div style="
-max-width:600px;
+.guarantee-list{
+max-width:650px;
 margin:auto;
 font-size:20px;
 line-height:2.2;
 color:#ddd;
-">
+}
 
-✓ 找不到符合需求車輛<br>
-✓ 暫時取消購車計畫<br>
-✓ 於其他車商購得車輛<br>
-✓ 車況與需求不符<br>
-✓ 雙方協議終止委託
-
-</div>
-
-<hr style="
-border:0;
-border-top:1px solid #333;
-margin:35px 0;
-">
-
-<h3 style="
-color:#FFD700;
-font-size:26px;
-text-align:center;
-margin-bottom:25px;
-">
-小宋車庫承諾
-</h3>
-
-<div style="
-max-width:600px;
-margin:auto;
-font-size:20px;
-line-height:2.2;
-color:#ddd;
-">
-
-✓ 不強迫成交<br>
-✓ 不收取違約金<br>
-✓ 不因未成交沒收保障金<br>
-✓ 尋車期間提供車況及行情資訊<br>
-✓ 若未成交，全額退還保障金
-
-</div>
-
-<div style="
+.song-note{
 margin-top:40px;
 padding:25px;
 background:#111;
 border-left:5px solid #FFD700;
 border-radius:12px;
-">
+}
 
-<p style="
-margin:0;
-font-size:18px;
-line-height:2;
-color:#ddd;
-">
-
-<strong style="
+form label{
+display:block;
 color:#FFD700;
+font-weight:bold;
+margin:18px 0 8px;
+font-size:18px;
+}
+
+form input,
+form textarea,
+form select{
+width:100%;
+box-sizing:border-box;
+padding:14px;
+border-radius:10px;
+border:1px solid #444;
+background:#111;
+color:white;
+font-size:17px;
+font-family:"Microsoft JhengHei",Arial,sans-serif;
+}
+
+.form-btn{
+width:100%;
+margin-top:25px;
+background:#FFD700;
+color:#000;
+border:0;
+border-radius:10px;
+padding:16px;
 font-size:22px;
-">
-小宋想說
-</strong>
+font-weight:bold;
+cursor:pointer;
+}
 
-<br><br>
+.form-btn:hover{
+background:#fff;
+}
 
-成交的是車，
+.cta{
+text-align:center;
+padding:70px 20px;
+background:#0f0f0f;
+}
 
-建立的是信任。
+.cta a{
+display:inline-block;
+background:#FFD700;
+color:#000;
+padding:18px 40px;
+font-size:24px;
+font-weight:bold;
+border-radius:12px;
+text-decoration:none;
+}
 
-<br><br>
+.cta a:hover{
+background:#fff;
+}
 
-如果最終沒有找到適合您的車輛，
+footer{
+background:#000;
+padding:40px;
+text-align:center;
+border-top:1px solid #333;
+color:#888;
+}
 
-保障金全額退還。
+@media(max-width:768px){
+.navbar{gap:20px;flex-wrap:wrap;}
+.navbar a{font-size:16px;}
+.grid{grid-template-columns:1fr;}
+.hero h1{font-size:38px;}
+.hero p{font-size:18px;}
+.section{padding:45px 18px;}
+.section-title{font-size:30px;}
+.process{font-size:18px;}
+.guarantee,.guarantee-list{font-size:18px;}
+.cta h2{font-size:32px !important;}
+}
+</style>
+</head>
 
-<br><br>
+<body>
 
-感謝您願意給小宋一個服務的機會，
+<nav class="navbar">
+<a href="index.html">首頁</a>
+<a href="about.html">關於小宋</a>
+<a href="findcar.html">委託尋車</a>
+<a href="loan.html">貸款試算</a>
+<a href="https://line.me/ti/p/uOXzpqw-wV" target="_blank">LINE好友</a>
+</nav>
 
-也謝謝您願意相信小宋。
-
+<section class="hero">
+<h1>委託尋車服務</h1>
+<p>
+找不到理想車嗎？<br>
+告訴小宋您的預算、年份、配備與需求，讓我幫您全台尋找適合車源。
 </p>
-
-</div>
-
-</div>
-
 </section>
+
+<section class="section">
+<h2 class="section-title">我們可以幫您找什麼車？</h2>
+<div class="grid">
+<div class="feature"><h3>國產車</h3><p>Altis、Focus、Fit、Mazda 等熱門車款。</p></div>
+<div class="feature"><h3>進口車</h3><p>BMW、Benz、Audi、Volkswagen 等品牌。</p></div>
+<div class="feature"><h3>特殊需求車款</h3><p>性能車、旅行車、七人座、稀有車型。</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">尋車流程</h2>
+<div class="process">
+提出需求<br>↓<br>加入 LINE 討論<br>↓<br>開始尋車<br>↓<br>提供車源資訊<br>↓<br>賞車驗車<br>↓<br>成交交車
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">尋車保障方案</h2>
+<div class="guarantee">
+✓ 找不到車，全額退還<br>
+✓ 不買車，全額退還<br>
+✓ 在其他車商買到車，全額退還<br>
+✓ 車況不符合期待，全額退還<br>
+✓ 不收任何違約金
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">委託尋車保障書</h2>
+<div class="guarantee-card">
+<p style="font-size:20px;line-height:2;text-align:center;color:#ddd;">
+為提供客戶更安心的購車體驗，小宋車庫提供委託尋車保障服務。<br><br>
+尋車保障金僅作為委託關係確認用途，並非購車定金、違約金或強制成交費用。
+</p>
+<hr style="border:0;border-top:1px solid #333;margin:35px 0;">
+<h3 class="guarantee-title">全額退還條件</h3>
+<div class="guarantee-list">
+✓ 找不到符合需求車輛<br>
+✓ 暫時取消購車計畫<br>
+✓ 於其他車商購得車輛<br>
+✓ 車況與需求不符<br>
+✓ 雙方協議終止委託
+</div>
+<hr style="border:0;border-top:1px solid #333;margin:35px 0;">
+<h3 class="guarantee-title">小宋車庫承諾</h3>
+<div class="guarantee-list">
+✓ 不強迫成交<br>
+✓ 不收取違約金<br>
+✓ 不因未成交沒收保障金<br>
+✓ 尋車期間提供車況及行情資訊<br>
+✓ 若未成交，全額退還保障金
+</div>
+<div class="song-note">
+<p style="margin:0;font-size:18px;line-height:2;color:#ddd;">
+<strong style="color:#FFD700;font-size:22px;">小宋想說</strong><br><br>
+成交的是車，建立的是信任。<br><br>
+如果最終沒有找到適合您的車輛，保障金全額退還。<br><br>
+感謝您願意給小宋一個服務的機會，也謝謝您願意相信小宋。
+</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">尋車需求表單</h2>
+<div class="card">
+<form onsubmit="sendFindCarForm(); return false;">
+<label>姓名</label>
+<input id="name" type="text" required>
+<label>聯絡電話</label>
+<input id="phone" type="text" required>
+<label>想找的品牌 / 車型</label>
+<input id="car" type="text" placeholder="例如：BMW 320i、RAV4、Focus ST" required>
+<label>預算範圍</label>
+<input id="budget" type="text" placeholder="例如：30～50萬" required>
+<label>年份需求</label>
+<input id="year" type="text" placeholder="例如：2018年後">
+<label>里程需求</label>
+<input id="mileage" type="text" placeholder="例如：10萬公里內">
+<label>購車方式</label>
+<select id="payment">
+<option value="尚未決定">尚未決定</option>
+<option value="現金">現金</option>
+<option value="貸款">貸款</option>
+<option value="現金或貸款都可">現金或貸款都可</option>
+</select>
+<label>其他需求</label>
+<textarea id="note" rows="5" placeholder="例如：不要事故車、需要認證車、指定顏色、希望原鈑件"></textarea>
+<button type="submit" class="form-btn">送出需求到 LINE</button>
+</form>
+</div>
+</section>
+
+<section class="section">
+<div class="card">
+<h2>小宋車庫承諾</h2>
+<p>
+本服務所收取之尋車保障金，並非購車定金，也不是違約金。<br><br>
+其用途僅為確認委託關係成立，並投入更多時間與資源協助尋找符合需求之車輛。<br><br>
+若最終未完成交易，保障金全額退還。
+</p>
+</div>
+</section>
+
+<section class="cta">
+<h2 style="color:#FFD700;font-size:40px;">立即委託尋車</h2>
+<p style="font-size:20px;color:#ddd;">告訴我您想找什麼車，剩下的交給小宋。</p>
+<br>
+<a href="https://line.me/ti/p/uOXzpqw-wV" target="_blank">加入 LINE 諮詢</a>
+</section>
+
+<footer>© 2026 小宋車庫 Song Garage</footer>
+
+<script>
+function sendFindCarForm(){
+const name=document.getElementById('name').value;
+const phone=document.getElementById('phone').value;
+const car=document.getElementById('car').value;
+const budget=document.getElementById('budget').value;
+const year=document.getElementById('year').value;
+const mileage=document.getElementById('mileage').value;
+const payment=document.getElementById('payment').value;
+const note=document.getElementById('note').value;
+const message=`您好小宋，我想委託尋車\n\n姓名：${name}\n電話：${phone}\n想找車款：${car}\n預算範圍：${budget}\n年份需求：${year}\n里程需求：${mileage}\n購車方式：${payment}\n其他需求：${note}`;
+const encodedMessage=encodeURIComponent(message);
+window.open(`https://line.me/R/msg/text/?${encodedMessage}`,'_blank');
+}
+</script>
+
+</body>
+</html>
