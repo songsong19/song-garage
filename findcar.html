@@ -389,6 +389,7 @@ color:#888;
 
 <script>
 function sendFindCarForm(){
+
 const name=document.getElementById('name').value;
 const phone=document.getElementById('phone').value;
 const car=document.getElementById('car').value;
@@ -397,11 +398,38 @@ const year=document.getElementById('year').value;
 const mileage=document.getElementById('mileage').value;
 const payment=document.getElementById('payment').value;
 const note=document.getElementById('note').value;
-const message=`您好小宋，我想委託尋車\n\n姓名：${name}\n電話：${phone}\n想找車款：${car}\n預算範圍：${budget}\n年份需求：${year}\n里程需求：${mileage}\n購車方式：${payment}\n其他需求：${note}`;
-const encodedMessage=encodeURIComponent(message);
-window.open(`https://line.me/R/msg/text/?${encodedMessage}`,'_blank');
+
+const message=
+`您好小宋，我想委託尋車
+
+姓名：${name}
+電話：${phone}
+想找車款：${car}
+預算範圍：${budget}
+年份需求：${year}
+里程需求：${mileage}
+購車方式：${payment}
+其他需求：${note}`;
+
+navigator.clipboard.writeText(message).then(function(){
+
+alert("尋車需求已複製，接下來會開啟小宋 LINE，直接貼上送出即可。");
+
+window.open(
+"https://line.me/ti/p/uOXzpqw-wV",
+"_blank"
+);
+
+}).catch(function(){
+
+alert("無法自動複製，已幫您開啟小宋 LINE。");
+
+window.open(
+"https://line.me/ti/p/uOXzpqw-wV",
+"_blank"
+);
+
+});
+
 }
 </script>
-
-</body>
-</html>
